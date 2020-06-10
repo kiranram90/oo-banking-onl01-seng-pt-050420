@@ -18,9 +18,8 @@ class Transfer
    end
  end
  
- def execute_transaction
-   if @sender.balance < 1000
-     "Transaction rejected. Please check your account balance."
+ def execute_transaction(sender:, receiver:, amount:)
+   Transfer.new(sender, receiver, amount)
    end
  end
    
